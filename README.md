@@ -8,9 +8,9 @@ npm install
 ```
 npm run serve
 ```
-####Then open http://localhost:8080/ (default or look at console for the uri)
+#### Then open http://localhost:8080/ (default or look at console for the uri)
 
-######You can filter books by title and publish date (or condition)
+###### You can filter books by title and publish date (or condition)
 
 ### Possible improvements:
 ###### imlpement date filter uses date picker
