@@ -8,14 +8,7 @@ export interface RootState {
   books: BooksState;
 }
 
-// export default new Vuex.Store({
-//   state: {},
-//   mutations: {},
-//   actions: {},
-//   modules: {},
-// });
-
-export default new Vuex.Store({
+export default new Vuex.Store<RootState>({
   modules: {
     booksStore: booksModule,
   },
