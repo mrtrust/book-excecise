@@ -36,6 +36,9 @@ export const booksModule = {
       ctx.commit("setLoading", true);
       return ApiService.instance.books.getBooks().then((r: Book[]) => {
         ctx.commit("setBooks", r);
+      }).catch((e: Error) => {
+        console.error(e.message);
+      }).finally(() => {
         ctx.commit("setLoading", false);
       });
     },

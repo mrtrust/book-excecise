@@ -5,17 +5,10 @@ import { booksModule, BooksState } from "@/store/booksModule";
 Vue.use(Vuex);
 
 export interface RootState {
-  books: BooksState;
+  booksStore: BooksState;
 }
 
-// export default new Vuex.Store({
-//   state: {},
-//   mutations: {},
-//   actions: {},
-//   modules: {},
-// });
-
-export default new Vuex.Store({
+export default new Vuex.Store<RootState>({
   modules: {
     booksStore: booksModule,
   },

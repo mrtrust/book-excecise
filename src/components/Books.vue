@@ -81,14 +81,14 @@ export default Vue.extend({
         return true;
       }
 
-      search = search.toLocaleLowerCase();
+      const searchLowerCase = search.toLocaleLowerCase();
 
-      if (item.title.toLocaleLowerCase().includes(search)) {
+      if (item.title.toLocaleLowerCase().includes(searchLowerCase)) {
         return true;
       }
       const dateTime = DateHelper.localDateTime(item.publishDate);
       if (dateTime) {
-        return dateTime.includes(search);
+        return dateTime.includes(searchLowerCase);
       }
       return false;
     },
